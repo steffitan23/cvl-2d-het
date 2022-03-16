@@ -93,7 +93,7 @@ def tung_load_dir(dir_path: Union[Path, str]):
 
 # Save 10 frames from start, middle, end section of the simulated array after first 100 frames
 def save_frames(index):
-    u_arr, positions = tung_load_dir("./new_data/data" + str(index))
+    u_arr, positions = tung_load_dir("new_data/data" + str(index))
     # load_data(u_arr)
     u_arr = u_arr[101:401]
     saved = []
@@ -112,11 +112,7 @@ def check_usable(save_arr):
                 break
             return save_arr[0:101:10]
 
-# def load_data():
-#     import imageio
-#     from IPython.display import Video
-#     imageio.mimwrite('take1.mp4', np.load('u_arr/data0_1.npy'), fps=30)
 run_sim(5)
-# load_data()
+
 # a values should be in between 0.05 and 0.1 (steps of 0.01)
 # k values should be 7, 8 or 9
